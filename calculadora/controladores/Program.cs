@@ -6,6 +6,10 @@ namespace calculadora.controladores
     {
         public static void Main(string[] args)
         {
+            /// <summary>
+            /// Creamos las variables y hacemos una llamada a la copia de los metodos
+            /// awb - 101023
+            /// </summary>
             MenuInterfaz menu = new MenuImplementacion();
             OperacionesInterfaz operacion = new operacionesImplementacion();
             bool cerrarMenu = false;
@@ -13,6 +17,11 @@ namespace calculadora.controladores
             
              while(!cerrarMenu)
             {
+                /// <summary>
+                /// Creamos el while que mantendra el menu abierto hasta que se seleccione la opcion cerrar
+                /// awb - 101023
+                /// </summary>
+
                 opcionseleccionada = menu.mostrarMenuYSeleccion();
 
 
@@ -27,7 +36,7 @@ namespace calculadora.controladores
                         break;
                     case 2:
                         ///Esta es la suma
-                        ///Pedimos los datos llamando al metodo menu.peticiondenumero
+                        ///Pedimos los datos llamando al operacion.peticiondenumero();
                         double primerNumero = operacion.peticionDeNumero();
                         double segundoNumero = operacion.peticionDeNumero();
                         ///Una vez recogido los datos calculamos la suma
@@ -38,7 +47,7 @@ namespace calculadora.controladores
                         break;
                     case 3:
                         ///Esta es la resta
-                        ///Pedimos los datos llamando al metodo menu.peticiondenumero
+                        ///Pedimos los datos llamando al metodo operacion.peticiondenumero();
                         double primerNumeroR = operacion.peticionDeNumero();
                         double segundoNumeroR = operacion.peticionDeNumero();
                         ///Una vez recogido los datos calculamos la resta
@@ -49,7 +58,7 @@ namespace calculadora.controladores
                         break;
                     case 4:
                         ///Esta es la multiplicacion
-                        ///Pedimos los datos llamando al metodo menu.peticiondenumero
+                        ///Pedimos los datos llamando al metodo operacion.peticiondenumero();
                         double primerNumeroM = operacion.peticionDeNumero();
                         double segundoNumeroM = operacion.peticionDeNumero();
                         ///Una vez recogido los datos calculamos la multiplicacion
@@ -60,7 +69,7 @@ namespace calculadora.controladores
                         break;
                     case 5:
                         ///Esta es la division
-                        ///Pedimos los datos llamando al metodo menu.peticiondenumero
+                        ///Pedimos los datos llamando al metodo operacion.peticiondenumero();
                         double primerNumeroD = operacion.peticionDeNumero();
                         double segundoNumeroD = operacion.peticionDeNumero();
                         ///Una vez recogido los datos calculamos la division
